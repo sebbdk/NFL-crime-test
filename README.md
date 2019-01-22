@@ -16,6 +16,6 @@ For this test it seemed more appropriate to wing it, since i has less time to pl
 
 Going with a gamejam'ish prototype approach i also skipped tests and error handling.
 
-The top' pages could problably also be merged into a single component, but in this case it was faster to copy paste than to do that planning.
+The top' pages could problably also be merged into a single component, but in this case it was faster to copy paste then to do that planning.
 
 All over a fun challenge, cheers!
