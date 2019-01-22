@@ -4,6 +4,6 @@
 <ul>
   <li *ngFor="let crime of topCrimes | async | strPos:filterArgs" >
     <b>{{crime.Category}}</b> - {{crime.arrest_count}}
-    (<a routerLink="/team/{{crime.Category}}">Top teams</a> | <a routerLink="/player/{{crime.Category}}">Top players</a>)
+    (<a routerLink="/team/{{crime.Category}}">Top teams</a> | <a routerLink="/player/{{crime.Category}}">Top players</a>| <a routerLink="/timeline/{{crime.Category}}">Timeline</a>)
   </li>
 </ul>

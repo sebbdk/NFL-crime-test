@@ -4,12 +4,14 @@ import { TopCrimesService } from './top-crimes.service';
 import { TopPlayersService } from './top-players.service';
 import { TopTeamsService } from './top-teams.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CrimeTimelineService } from './crime-timeline.service';
 
 @NgModule({
   declarations: [
     TopCrimesService,
     TopPlayersService,
-    TopTeamsService
+    TopTeamsService,
+    CrimeTimelineService
   ],
   imports: [
     CommonModule

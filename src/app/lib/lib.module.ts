@@ -8,6 +8,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { StrPosPipe } from './str-pos.pipe';
+import { CrimeTimelineComponent } from './crime-timeline/crime-timeline.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,15 @@ import { StrPosPipe } from './str-pos.pipe';
     TopPlayersForCrimeComponent,
     TopTeamsForCrimeComponent,
     NavComponent,
-    StrPosPipe
+    StrPosPipe,
+    CrimeTimelineComponent
   ],
   exports: [
     TopCrimesComponent,
     TopPlayersForCrimeComponent,
     TopTeamsForCrimeComponent,
-    NavComponent
+    NavComponent,
+    CrimeTimelineComponent
   ],
   imports: [
     RouterModule,
