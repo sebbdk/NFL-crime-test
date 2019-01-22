@@ -1,0 +1,7 @@
+
+<ul>
+  <li *ngFor="let crime of topCrimes | async" >
+    <b>{{crime.Category}}</b> - {{crime.arrest_count}}
+    (<a routerLink="/team/{{crime.Category}}">Top teams</a> | <a routerLink="/player/{{crime.Category}}">Top players</a>)
+  </li>
+</ul>

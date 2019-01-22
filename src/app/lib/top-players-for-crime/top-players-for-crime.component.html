@@ -1,0 +1,6 @@
+
+<ul>
+  <li *ngFor="let crime of data | async" >
+    <b>{{crime.Name}}</b> - {{crime.arrest_count}}
+  </li>
+</ul>
