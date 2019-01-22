@@ -14,10 +14,19 @@ export class TopTeamsForCrimeComponent implements OnInit {
 
   public data: Observable<any>;
 
+  public filterArgs: Object = {
+    prop: 'Team_name',
+    subj: ''
+  };
+
   constructor(private topTeamServ: TopTeamsService) { }
 
   ngOnInit() {
     this.data = this.topTeamServ.data(this.crime)
   }
 
+  filterChange(event) {
+    const target: any = event.target || event.srcElement || event.currentTarget;
+    this.filterArgs = { ...this.filterArgs, subj: target.value}
+  }
 }

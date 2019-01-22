@@ -10,9 +10,23 @@ import { TopCrimesService } from 'src/app/data/top-crimes.service';
 export class TopCrimesComponent implements OnInit {
 
   public topCrimes: Observable<any>;
+  public topCrimesSync: Array<any> = [];
+
+  public filterArgs: Object = {
+    prop: 'Category',
+    subj: ''
+  };
 
   constructor(private topCrimesServ: TopCrimesService) {
     this.topCrimes = topCrimesServ.data();
+    this.topCrimes.subscribe(data => {
+      this.topCrimesSync = data;
+    });
+  }
+
+  filterChange(event) {
+    const target: any = event.target || event.srcElement || event.currentTarget;
+    this.filterArgs = { ...this.filterArgs, subj: target.value}
   }
 
   ngOnInit() {

@@ -1,6 +1,7 @@
+<input placeholder="Filter by keyword" (keyup)=filterChange($event) (change)=filterChange($event)>
 
 <ul>
-  <li *ngFor="let crime of data | async" >
+  <li *ngFor="let crime of data | async | strPos:filterArgs" >
     <b>{{crime.Team_name}}</b> - {{crime.arrest_count}}
   </li>
 </ul>
